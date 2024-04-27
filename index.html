@@ -13,8 +13,8 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            min-height: 100vh; /* Ensure at least full viewport height */
-            position: relative; /* Ensure positioning context */
+            min-height: 100vh;
+            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -24,13 +24,13 @@
 
         .app-logo-container {
             position: absolute;
-            top: 20px; /* Adjust top position as needed */
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
         }
 
         .app-logo {
-            width: 150px; /* Adjust size as needed */
+            width: 150px;
             height: auto;
         }
 
@@ -38,17 +38,17 @@
             font-size: 24px;
             font-weight: bold;
             color: #000000;
-            margin-top: 20px; /* Adjust top margin as needed */
+            margin-top: 20px;
         }
 
         p.bio {
             font-size: 18px;
             color: #000000;
-            margin-top: 15px; /* Adjust top margin as needed */
+            margin-top: 15px;
         }
 
         .button-container {
-            margin-top: 20px; /* Adjust top margin for the button container */
+            margin-top: 20px;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -62,15 +62,15 @@
             border-radius: 40px;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin-bottom: 10px; /* Add margin bottom for spacing */
+            margin-bottom: 10px;
         }
 
         .download-button:hover {
-            background-color: #45a049; /* Darker color on hover */
+            background-color: #45a049;
         }
 
         .share-icon {
-            width: 30px; /* Adjust size as needed */
+            width: 30px;
             height: auto;
             cursor: pointer;
             transition: transform 0.3s;
@@ -78,141 +78,163 @@
         }
 
         .share-icon:hover {
-            transform: scale(1.1); /* Scale up on hover */
+            transform: scale(1.1);
         }
 
         .social-icons {
-            margin-top: 10px; /* Adjust top margin for social icons */
-            display: flex;
-            flex-wrap: wrap; /* Wrap icons to next line if needed */
-            justify-content: center; /* Center icons horizontally */
+            margin-top: 10px;
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            /* justify-content: center; */
         }
 
         .social-icons a {
-            margin: 0 20px; /* Adjust margin between social icons */
-            color: #000000; /* Set icon color */
-            font-size: 24px; /* Set icon size */
-            text-decoration: none; /* Remove underline */
-            transition: color 0.3s; /* Add transition effect */
+            margin: 0 20px;
+            color: #000000;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
         .social-icons a:hover {
-            color: #172fb7; /* Change color on hover */
+            color: #172fb7;
         }
 
         .contact-info {
-            margin-top: 20px; /* Adjust top margin for contact info container */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0.5); /* Add background color with transparency */
-            padding: 10px; /* Add padding for spacing */
-            border-radius: 10px; /* Add border radius for rounded corners */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow for blur effect */
-            width: 300px; /* Adjust width as needed */
-        }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .contact-info-row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px; /* Add margin bottom for spacing */
-            margin-top: 10px;
-        }
+.contact-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 5px; /* Adjust this value to control the distance between boxes */
+    transition: background-color 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width:300px;
+}
 
-        .contact-info-label {
-            font-weight: bold; /* Make label text bold */
-            margin-right: 10px; /* Add margin right for spacing */
-        }
+.contact-box:hover {
+    background-color: #f0f0f0;
+}
 
-        .contact-info-value {
-            font-size: 18px; /* Adjust font size */
-            color: #000000; /* Set text color */
-        }
+.contact-box i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.contact-info-value {
+    font-size: 16px;
+    color: #333;
+}
+
+.phone-number {
+    flex-grow: 1; /* Equal length for both phone numbers */
+    text-align: left;
+}
+
+.primary-number {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.secondary-number {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.phone-icon {
+    margin-left: auto; /* Align icon to the right */
+}
+
 
         .primary-number {
-            color: green; /* Set color for primary number */
+            color: green;
         }
 
         .secondary-number {
-            color: red; /* Set color for secondary number */
+            color: red;
         }
 
         .location-icon {
-            font-size: 18px; /* Adjust icon size */
-            margin-right: 5px; /* Add margin right for spacing */
+            font-size: 18px;
+            margin-right: 5px;
         }
+
+
+        
 
         @media screen and (max-width: 768px) {
             .app-logo {
-                width: 100px; /* Adjust size for smaller screens */
+                width: 100px;
             }
             h3.name {
-                font-size: 20px; /* Adjust font size for smaller screens */
-                margin-top: 15px; /* Adjust top margin for smaller screens */
+                font-size: 20px;
+                margin-top: 15px;
             }
             p.bio {
-                font-size: 16px; /* Adjust font size for smaller screens */
-                margin-top: 10px; /* Adjust top margin for smaller screens */
-                width: 100%; /* Ensure bio fills the width on smaller screens */
-                display: block; /* Display bio as a block-level element */
+                font-size: 16px;
+                margin-top: 10px;
+                width: 100%;
+                display: block;
             }
             .social-icons a {
-                margin: 10px; /* Adjust margin between social icons for smaller screens */
+                margin: 10px;
             }
             .contact-info {
-                width: 100%; /* Adjust width for smaller screens */
+                width: 100%;
+            }
+            .contact-info td {
+                padding: 5px;
             }
             .location-icon {
-                margin-top: 10px; /* Increase distance between location icon and contact box */
+                margin-top: 10px;
             }
         }
 
         @media screen and (min-width: 768px) {
-    .app-logo-container {
-        width: 60%;
-    }
-
-    .button-container {
-        width: 100%; /* Set button container width to 100% */
-        justify-content: center; /* Center align the buttons */
-    }
-
-    .download-button,
-    .share-icon {
-        margin: 0 10px; /* Add margin between the buttons */
-    }
-
-    .contact-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 20px;
-        width: 80%;
-    }
-
-    .contact-info-row {
-        margin: 5px 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .contact-info-label {
-        width: 30%;
-        text-align: right;
-    }
-
-    .contact-info-value {
-        width: 70%;
-        text-align: left;
-    }
-
-    .location-icon {
-        margin-top: 0;
-    }
-}
-
+            .app-logo-container {
+                width: 60%;
+            }
+            .button-container {
+                width: 100%;
+                justify-content: center;
+            }
+            .download-button,
+            .share-icon {
+                margin: 0 10px;
+            }
+            .contact-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                width: 80%;
+            }
+            .contact-info-row {
+                margin: 5px 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .contact-info-label {
+                width: 30%;
+                text-align: right;
+            }
+            .contact-info-value {
+                width: 70%;
+                text-align: left;
+            }
+            .contact-info td {
+                padding: 5px;
+            }
+            .location-icon {
+                margin-top: 0;
+            
+            }
+        }
     </style>
 </head>
 <body>
@@ -226,45 +248,50 @@
                 <img src="https://static-00.iconduck.com/assets.00/share-icon-2048x1911-60w04qpe.png" alt="Share Icon" class="share-icon" onclick="share()">
             </a>
         </div>
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-solid fa-globe"></i></a>
+        <div  style="margin-top:15px;background-color: black;border-radius: 20px;padding:7px">
+        <div class="social-icons"  style="text-align: center;">
+            <a href="#"><i class="fa-brands fa-facebook-f" style="color:white;"></i></a>
+            <a href="#"><i class="fab fa-twitter" style="color:white;"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="color:white;"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin" style="color:white;"></i></a>
+            <a href="#"><i class="fa-solid fa-globe" style="color:white;"></i></a>
         </div>
-        <div class="contact-info">
-            <div class="contact-info-row">
-                <div class="contact-info-label">
-                    <i class="fa-solid fa-envelope email-icon"></i>
-                </div>
-                <div class="contact-info-value">alanbinto@gmail.com</div>
+    </div>  
+        <div class="contact-info" style="padding-top: 30px;background-color: rgba(237, 226, 226,  0.5);padding:10px;border-radius: 20px;margin-top:25px; ">
+            <div class="contact-box" style="background-color: rgb(248, 239, 239);border-radius: 10px;padding: 15px;margin-top:15px;" >
+                <i class="fa-solid fa-envelope email-icon"></i>
+                <div class="contact-info-value" style="text-align: right;width:100%">alanbinto@gmail.com</div>
             </div>
-            <div class="contact-info-row">
-                <div class="contact-info-label">
-                    <i class="fa-solid fa-phone phone-icon"></i>
-                </div>
-                <div class="contact-info-value primary-number">Primary: +123456789</div>
+            <div class="contact-box" style="background-color: rgb(248, 239, 239);border-radius: 10px;padding: 15px;margin-top:15px;">
+                <i class="fa-solid fa-phone phone-icon"></i>&nbsp; &nbsp;
+                <div class="contact-info-value" style="text-align: right;width:100%">
+                    +123456789 &nbsp; &nbsp; &nbsp;
+                   
+                 </div>
+                
             </div>
-            <div class="contact-info-row">
-                <div class="contact-info-label">
-                    <i class="fa-solid fa-phone phone-icon"></i>
-                </div>
-                <div class="contact-info-value secondary-number">Secondary: +987654321</div>
+            <div class="contact-box" style="background-color: rgb(248, 239, 239);border-radius: 10px;padding: 15px;margin-top:15px;">
+                
+                <div class="contact-info-value" style="text-align: right;width:100%">
+                    +123456789 
+                   
+                 </div>
+                
             </div>
-            <div class="contact-info-row">
-                <div class="contact-info-label">
-                    <i class="fa-solid fa-map-marker-alt location-icon"></i>
-                </div>
-                <div class="contact-info-value">Office Address: 123 Main Street, City, Country</div>
+            <div class="contact-box" style="background-color: rgb(248, 239, 239);border-radius: 10px;padding: 15px; margin-top:15px;">
+                <i class="fa-solid fa-map-marker-alt location-icon"></i>
+                <div class="contact-info-value" style="text-align: right;width:100%">123 Main Street, City, Country</div>
+                
             </div>
-            <div class="contact-info-row">
-                <div class="contact-info-label">
-                    <i class="fa-solid fa-map-marker-alt location-icon"></i>
-                </div>
-                <div class="contact-info-value">Home Address: 456 Elm Street, City, Country</div>
+            <div class="contact-box" style="background-color: rgb(248, 239, 239);border-radius: 10px;padding: 15px;margin-top:15px; ">
+              
+                <div class="contact-info-value" style="text-align: right;width:100%"> 456 Elm Street, City, Country</div>
             </div>
+           
         </div>
+        
+        
+        
     </div>
     <script>
         function changeBackground(value) {
