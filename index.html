@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringme Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* background-image: url("https://s.tmimgcdn.com/scr/800x500/255800/elle-cizilmis-minimalist-akiskan-sekiller-arka-plan-v10_255858-original.jpg"); */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Ensure at least full viewport height */
+            position: relative; /* Ensure positioning context */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .app-logo-container {
+            position: absolute;
+            top: 20px; /* Adjust top position as needed */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .app-logo {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        h3.name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000000;
+            margin-top: 20px; /* Adjust top margin as needed */
+        }
+
+        p.bio {
+            font-size: 18px;
+            color: #000000;
+            margin-top: 15px; /* Adjust top margin as needed */
+        }
+
+        .button-container {
+            margin-top: 20px; /* Adjust top margin for the button container */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .download-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px; /* Add margin bottom for spacing */
+        }
+
+        .download-button:hover {
+            background-color: #45a049; /* Darker color on hover */
+        }
+
+        .share-icon {
+            width: 30px; /* Adjust size as needed */
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-left: 10px;
+        }
+
+        .share-icon:hover {
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+        .social-icons {
+            margin-top: 10px; /* Adjust top margin for social icons */
+            display: flex;
+            flex-wrap: wrap; /* Wrap icons to next line if needed */
+            justify-content: center; /* Center icons horizontally */
+        }
+
+        .social-icons a {
+            margin: 0 20px; /* Adjust margin between social icons */
+            color: #000000; /* Set icon color */
+            font-size: 24px; /* Set icon size */
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s; /* Add transition effect */
+        }
+
+        .social-icons a:hover {
+            color: #172fb7; /* Change color on hover */
+        }
+
+        .contact-info {
+            margin-top: 20px; /* Adjust top margin for contact info container */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.5); /* Add background color with transparency */
+            padding: 10px; /* Add padding for spacing */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add box shadow for blur effect */
+            width: 300px; /* Adjust width as needed */
+        }
+
+        .contact-info-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px; /* Add margin bottom for spacing */
+            margin-top: 10px;
+        }
+
+        .contact-info-label {
+            font-weight: bold; /* Make label text bold */
+            margin-right: 10px; /* Add margin right for spacing */
+        }
+
+        .contact-info-value {
+            font-size: 18px; /* Adjust font size */
+            color: #000000; /* Set text color */
+        }
+
+        .primary-number {
+            color: green; /* Set color for primary number */
+        }
+
+        .secondary-number {
+            color: red; /* Set color for secondary number */
+        }
+
+        .location-icon {
+            font-size: 18px; /* Adjust icon size */
+            margin-right: 5px; /* Add margin right for spacing */
+        }
+
+        @media screen and (max-width: 768px) {
+            .app-logo {
+                width: 100px; /* Adjust size for smaller screens */
+            }
+            h3.name {
+                font-size: 20px; /* Adjust font size for smaller screens */
+                margin-top: 15px; /* Adjust top margin for smaller screens */
+            }
+            p.bio {
+                font-size: 16px; /* Adjust font size for smaller screens */
+                margin-top: 10px; /* Adjust top margin for smaller screens */
+                width: 100%; /* Ensure bio fills the width on smaller screens */
+                display: block; /* Display bio as a block-level element */
+            }
+            .social-icons a {
+                margin: 10px; /* Adjust margin between social icons for smaller screens */
+            }
+            .contact-info {
+                width: 100%; /* Adjust width for smaller screens */
+            }
+            .location-icon {
+                margin-top: 10px; /* Increase distance between location icon and contact box */
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+    .app-logo-container {
+        width: 60%;
+    }
+
+    .button-container {
+        width: 100%; /* Set button container width to 100% */
+        justify-content: center; /* Center align the buttons */
+    }
+
+    .download-button,
+    .share-icon {
+        margin: 0 10px; /* Add margin between the buttons */
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .contact-info-row {
+        margin: 5px 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-info-label {
+        width: 30%;
+        text-align: right;
+    }
+
+    .contact-info-value {
+        width: 70%;
+        text-align: left;
+    }
+
+    .location-icon {
+        margin-top: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="app-logo-container">
+        <img src="appLogo (1).png" alt="App Logo" class="app-logo">
+        <h3 class="name">Alan Binto</h3>
+        <p class="bio">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <div class="button-container">
+            <button class="download-button">Download Profile</button>
+            <a href="#">
+                <img src="https://static-00.iconduck.com/assets.00/share-icon-2048x1911-60w04qpe.png" alt="Share Icon" class="share-icon" onclick="share()">
+            </a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-solid fa-globe"></i></a>
+        </div>
+        <div class="contact-info">
+            <div class="contact-info-row">
+                <div class="contact-info-label">
+                    <i class="fa-solid fa-envelope email-icon"></i>
+                </div>
+                <div class="contact-info-value">alanbinto@gmail.com</div>
+            </div>
+            <div class="contact-info-row">
+                <div class="contact-info-label">
+                    <i class="fa-solid fa-phone phone-icon"></i>
+                </div>
+                <div class="contact-info-value primary-number">Primary: +123456789</div>
+            </div>
+            <div class="contact-info-row">
+                <div class="contact-info-label">
+                    <i class="fa-solid fa-phone phone-icon"></i>
+                </div>
+                <div class="contact-info-value secondary-number">Secondary: +987654321</div>
+            </div>
+            <div class="contact-info-row">
+                <div class="contact-info-label">
+                    <i class="fa-solid fa-map-marker-alt location-icon"></i>
+                </div>
+                <div class="contact-info-value">Office Address: 123 Main Street, City, Country</div>
+            </div>
+            <div class="contact-info-row">
+                <div class="contact-info-label">
+                    <i class="fa-solid fa-map-marker-alt location-icon"></i>
+                </div>
+                <div class="contact-info-value">Home Address: 456 Elm Street, City, Country</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function changeBackground(value) {
+            const body = document.querySelector('body');
+            switch (value) {
+                case 1:
+                    body.style.backgroundImage = 'url("https://s.tmimgcdn.com/scr/800x500/255800/elle-cizilmis-minimalist-akiskan-sekiller-arka-plan-v10_255858-original.jpg")';
+                    break;
+                case 2:
+                    body.style.backgroundImage = 'url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMjItbWluZC0xNl8xLmpwZw.jpg")';
+                    break;
+                case 3:
+                    body.style.backgroundImage = 'url("https://img.freepik.com/premium-photo/abstract-background-design-images-wallpaper-ai-generated_643360-138609.jpg")';
+                    break;
+                case 4:
+                    body.style.backgroundImage = 'url("https://example.com/background4.jpg")';
+                    break;
+                default:
+                    body.style.backgroundImage = 'url("https://s.tmimgcdn.com/scr/800x500/255800/elle-cizilmis-minimalist-akiskan-sekiller-arka-plan-v10_255858-original.jpg")';
+            }
+        }
+
+        // Change background based on a value (1, 2, 3, or 4)
+        changeBackground(3); // Change background to the first image
+    </script>
+    <script>
+        function share() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Ringme Card',
+                    text: 'Check out Alan Binto\'s profile!',
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Shared successfully.');
+                }).catch((error) => {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                console.log('Web Share API not supported.');
+            }
+        }
+    </script>
+</body>
+</html>
